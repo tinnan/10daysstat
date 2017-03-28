@@ -34,7 +34,7 @@ def combine_prob(n, r, repeat=False):
     :return: probability
     """
     if repeat:
-        return [factorial(r + n - 1), factorial(r) * factorial(n - 1)]
+        return factorial(r + n - 1) // factorial(r) * factorial(n - 1)
     else:
         # without repeat, it is similar to permutation without repetition
         # just that the order does not matter.
